@@ -1,1 +1,17 @@
+Step 1.1
+: Things to Know in C++/Java/Python or any language
+1.1.A:  User Input / Output:
+
+import java.util.*;
+Scanner Sc= new Scanner(System.in);
+int num =sc.nextInt();
+String s= sc.nextLine();
+
+
+import java.io.*;
+BufferedReader bf=new BufferedReader( new InputStreamReader(System.in));
+String s= bf.readLine();
+int num = Integer.parseInt(bf.readLine());
+
+
 
