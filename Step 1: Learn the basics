@@ -163,6 +163,52 @@ class Solution {
 
 
 
+Step 1.5 : Learn Basic Recursion:
+1.5.C:  Print 1 to N using recursion:
+
+class Solution
+{
+    
+  public void printNos(int N)
+    {
+        if(N==0) 
+        return ;
+        
+        printNos(N-1);
+        System.out.print(N+" ");
+        
+        //Your code here
+        
+    }
+}
+
+1.5.D:	Print N to 1 using recursion:
+
+class Solution
+{
+    
+  public void printNos(int N)
+    {
+        if(N==0) 
+        return ;
+        
+        System.out.print(N+" ");
+        printNos(N-1);
+       
+        
+        //Your code here
+        
+    }
+}
+
+1.5.E:	Sum of first N numbers			
+1.5.F:	Factorial of N numbers			
+1.5.G:	Reverse an array			
+1.5.H:	Check if a string is palindrome or not			
+1.5.I:	Fibonacci Number
+
+
+
 
 
 
