@@ -92,7 +92,25 @@ class Solution{
 1.4.B:	Reverse a Number:
 
 
-1.4.C:	Check Palindrome			
+1.4.C:	Check Palindrome:
+
+
+class Solution
+{
+    public String is_palindrome(int n)
+    {
+        // Code here
+        String s=Integer.toString(n);
+        String rev = "";
+        for(int i=s.length()-1; i>=0; i--){
+            rev=rev+s.charAt(i);
+        }
+       
+         if(s.equals(rev)) return "Yes";
+           return "No";
+    }
+}
+
 1.4.D:	GCD Or HCF			
 1.4.E:	Armstrong Numbers			
 1.4.F:	Print all Divisors			
