@@ -215,8 +215,58 @@ class Solution {
     
     
 }
-1.5.F:	Factorial of N numbers			
-1.5.G:	Reverse an array			
+1.5.F:	Factorial of N numbers	:
+class Solution{
+    static ArrayList<Long> factorialNumbers(long N){ //5 
+        // code here
+        ArrayList<Long> list=new ArrayList<Long>();
+        // if(N<1) return 0;
+        list.add( (long)1 );
+        if(N==1) return list;
+        find( list , 2 , N , 1);
+        return list ;
+    //   long r= N*factorialNumbers(N-1);
+    }
+    // list , 1 , 5 , 1
+    public static void find( ArrayList<Long> list, int i , long n , long fact){
+        
+        fact*=i;
+        if( fact<= n ) {
+            list.add( fact );
+            find( list , i+1 , n , fact  );
+        }
+        return ;
+    }
+}
+
+1.5.G:	Reverse an array:
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t-->0){
+		    int n = sc.nextInt();
+		    int arr[] = new int[n];
+		    for(int i=0; i<n; i++){
+		        arr[i]=sc.nextInt();
+		    }
+		    rev(arr,n-1);
+		    System.out.println();
+		}
+	}
+	
+	public static void rev(int arr[], int n){
+	    if(n<0) return;
+	    
+	    System.out.print(arr[n]+" ");
+	    rev(arr,n-1);
+	    
+	    
+	    
+	}
+}
 1.5.H:	Check if a string is palindrome or not			
 1.5.I:	Fibonacci Number
 
