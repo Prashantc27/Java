@@ -111,8 +111,53 @@ class Solution
     }
 }
 
-1.4.D:	GCD Or HCF			
-1.4.E:	Armstrong Numbers			
+1.4.D:	GCD Or HCF:
+
+
+class Solution {
+    static Long[] lcmAndGcd(Long A , Long B) {
+        // code here
+        Long a= A;
+        Long b=B;
+    
+        while(A%B!=0){
+            Long temp = A%B;
+            A=B;
+            B=temp;
+        }
+        
+        Long lcm= (a*b)/B;
+        Long[] r={lcm, B};
+        return r;
+        
+     
+    }
+};
+
+
+1.4.E:	Armstrong Numbers:
+
+class Solution {
+    static String armstrongNumber(int n){
+        // code here
+        int c=0;
+        int t=n;
+        while(n!=0){
+            int r= n%10;
+            n=n/10;
+            int p=(int)Math.pow(r,3);
+            c=c+p;
+            
+        }
+        if(c==t){
+            return "Yes";
+        }
+        else
+          return "No";
+        
+    }
+}
+
 1.4.F:	Print all Divisors			
 1.4.G:	Check for Prime
 
