@@ -65,6 +65,41 @@ class Geeks {
 
 
 
+Step 1.4 Know Basic Maths:
+
+1.4.A: Count Digits:
+
+class Solution{
+    static int evenlyDivides(int N){
+        // code here
+        int count=0;
+        int temp=N;
+    
+        while(N!=0){
+            int div=N%10;
+            if(div!=0){
+                
+            if(temp%div==0){
+                count++;
+            }
+            }
+            N=N/10;;
+        }
+        return count;
+    }
+}
+
+1.4.B:	Reverse a Number:
+
+
+1.4.C:	Check Palindrome			
+1.4.D:	GCD Or HCF			
+1.4.E:	Armstrong Numbers			
+1.4.F:	Print all Divisors			
+1.4.G:	Check for Prime
+
+
+
 
 
 
