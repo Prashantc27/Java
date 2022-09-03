@@ -65,6 +65,213 @@ class Geeks {
 
 
 
+Step 1.4 Know Basic Maths:
+
+1.4.A: Count Digits:
+
+class Solution{
+    static int evenlyDivides(int N){
+        // code here
+        int count=0;
+        int temp=N;
+    
+        while(N!=0){
+            int div=N%10;
+            if(div!=0){
+                
+            if(temp%div==0){
+                count++;
+            }
+            }
+            N=N/10;;
+        }
+        return count;
+    }
+}
+
+1.4.B:	Reverse a Number:
+
+
+1.4.C:	Check Palindrome:
+
+
+class Solution
+{
+    public String is_palindrome(int n)
+    {
+        // Code here
+        String s=Integer.toString(n);
+        String rev = "";
+        for(int i=s.length()-1; i>=0; i--){
+            rev=rev+s.charAt(i);
+        }
+       
+         if(s.equals(rev)) return "Yes";
+           return "No";
+    }
+}
+
+1.4.D:	GCD Or HCF:
+
+
+class Solution {
+    static Long[] lcmAndGcd(Long A , Long B) {
+        // code here
+        Long a= A;
+        Long b=B;
+    
+        while(A%B!=0){
+            Long temp = A%B;
+            A=B;
+            B=temp;
+        }
+        
+        Long lcm= (a*b)/B;
+        Long[] r={lcm, B};
+        return r;
+        
+     
+    }
+};
+
+
+1.4.E:	Armstrong Numbers:
+
+class Solution {
+    static String armstrongNumber(int n){
+        // code here
+        int c=0;
+        int t=n;
+        while(n!=0){
+            int r= n%10;
+            n=n/10;
+            int p=(int)Math.pow(r,3);
+            c=c+p;
+            
+        }
+        if(c==t){
+            return "Yes";
+        }
+        else
+          return "No";
+        
+    }
+}
+
+1.4.F:	Print all Divisors			
+1.4.G:	Check for Prime
+
+
+
+Step 1.5 : Learn Basic Recursion:
+1.5.C:  Print 1 to N using recursion:
+
+class Solution
+{
+    
+  public void printNos(int N)
+    {
+        if(N==0) 
+        return ;
+        
+        printNos(N-1);
+        System.out.print(N+" ");
+        
+        //Your code here
+        
+    }
+}
+
+1.5.D:	Print N to 1 using recursion:
+
+class Solution
+{
+    
+  public void printNos(int N)
+    {
+        if(N==0) 
+        return ;
+        
+        System.out.print(N+" ");
+        printNos(N-1);
+       
+        
+        //Your code here
+        
+    }
+}
+
+1.5.E:	Sum of first N numbers:
+
+class Solution {
+    long sumOfSeries(long N) {
+        // code here
+        if(N<0) return 0;
+        
+        
+        // System.out.print(N+" ");
+        return (long)Math.pow(N,3) + sumOfSeries(N-1);
+    }
+    
+    
+}
+1.5.F:	Factorial of N numbers	:
+class Solution{
+    static ArrayList<Long> factorialNumbers(long N){ //5 
+        // code here
+        ArrayList<Long> list=new ArrayList<Long>();
+        // if(N<1) return 0;
+        list.add( (long)1 );
+        if(N==1) return list;
+        find( list , 2 , N , 1);
+        return list ;
+    //   long r= N*factorialNumbers(N-1);
+    }
+    // list , 1 , 5 , 1
+    public static void find( ArrayList<Long> list, int i , long n , long fact){
+        
+        fact*=i;
+        if( fact<= n ) {
+            list.add( fact );
+            find( list , i+1 , n , fact  );
+        }
+        return ;
+    }
+}
+
+1.5.G:	Reverse an array:
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t-->0){
+		    int n = sc.nextInt();
+		    int arr[] = new int[n];
+		    for(int i=0; i<n; i++){
+		        arr[i]=sc.nextInt();
+		    }
+		    rev(arr,n-1);
+		    System.out.println();
+		}
+	}
+	
+	public static void rev(int arr[], int n){
+	    if(n<0) return;
+	    
+	    System.out.print(arr[n]+" ");
+	    rev(arr,n-1);
+	    
+	    
+	    
+	}
+}
+1.5.H:	Check if a string is palindrome or not			
+1.5.I:	Fibonacci Number
+
+
+
 
 
 
