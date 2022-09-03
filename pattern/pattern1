@@ -53,3 +53,21 @@ public static void main(String args[]) {
      }
     }
     
+Patter 6:
+
+public static void main(String args[]) {
+         int N=5;
+     for(int i=1; i<=5; i++){
+         int j=1;
+    
+         for( ; j<=N;j++ ){
+             System.out.print(j);
+         }
+         N--;
+         System.out.println();
+         
+     }
+    }
+    
+    
+    
