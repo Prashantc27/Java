@@ -241,5 +241,23 @@ Pattern 10:
     }       
      }
      
+  Pattern 12:
+  
+  Pattern 13:
+  
+  
+     public static void main(String args[]) {
+         int c=0;;
+    for (int i=1; i<=5; i++){
+        for(int j=i; j>=1; j--){
+           c++;
+            System.out.print(c+" ");
+        }
+         System.out.println();
+    }
+         
+         
+     }
+     
    
 
