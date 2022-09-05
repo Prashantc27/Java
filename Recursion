@@ -90,3 +90,12 @@ public static void printDecreasing(int n){
         displayArrReverse(arr,idx+1);
         System.out.println(arr[idx]);
     }
+
+11. Max of an array:
+ 
+ public static int maxOfArray(int[] arr, int idx){
+        if(idx==arr.length-1)
+        return arr[idx];
+
+        int m= Math.max(arr[idx],maxOfArray(arr,idx+1));
+        return m;
