@@ -25,3 +25,20 @@ public static void printDecreasing(int n){
         System.out.println(n);
         
     }
+  
+  4. Factorial:
+   public static int factorial(int n){
+        if(n<1) return 1;
+
+        return n*factorial(n-1);
+        
+    }
+    
+   5. Power linear:
+   
+   public static int power(int x, int n){
+         if(n<1) return 1;
+         return x*power(x,n-1);
+    }
+    
+    
