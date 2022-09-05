@@ -34,6 +34,8 @@ public static void printDecreasing(int n){
         
     }
     
+  
+    
    5. Power linear:
    
    public static int power(int x, int n){
@@ -68,3 +70,12 @@ public static void printDecreasing(int n){
          }
            return xx;    
           }
+  
+  9. Display Array:
+    public static void displayArr(int[] arr, int idx){
+        if(idx==arr.length) 
+          return;
+
+        System.out.println(arr[idx]);
+        displayArr(arr,idx+1);
+    }
