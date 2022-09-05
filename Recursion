@@ -41,4 +41,17 @@ public static void printDecreasing(int n){
          return x*power(x,n-1);
     }
     
+   6. Power Logarithmic:
+   
+   
+    public static int power(int x, int n){
+         if(n==1) return x ;
+
+         if(n%2==0){
+         return power(x,n/2)*power(x,n/2);   
+          }
+        else{
+           return power(x,n/2)*power(x,n/2)*x;    
+          }
+    }
     
