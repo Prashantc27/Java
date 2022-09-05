@@ -79,3 +79,14 @@ public static void printDecreasing(int n){
         System.out.println(arr[idx]);
         displayArr(arr,idx+1);
     }
+    
+  10. Array reverse:
+   
+    public static void displayArrReverse(int[] arr, int idx) {
+
+        if(idx==arr.length) 
+          return;
+
+        displayArrReverse(arr,idx+1);
+        System.out.println(arr[idx]);
+    }
