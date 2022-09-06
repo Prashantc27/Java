@@ -109,3 +109,23 @@ public static void printDecreasing(int n){
         return idx;
 
         return firstIndex(arr,idx+1, x);
+        
+ 13. Last index of occurrence:
+ 
+     public static int lastIndex(int[] arr, int idx, int x){
+         if(idx==arr.length){
+             return -1;
+         }
+          int r=lastIndex( arr,  idx+1,  x);
+              if(r==-1){
+                  if(arr[idx]==x){
+                      return idx;
+                  }
+                  else{
+                      return -1;
+                  }
+              }
+              else 
+              return r;
+         }
+
