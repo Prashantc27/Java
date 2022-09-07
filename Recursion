@@ -337,3 +337,21 @@ static String[] code = {".;","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz
 
 
     }
+    
+ 21. Print KPC: 
+ 
+ static String[] code = {".;","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz"};
+    public static void printKPC(String str, String asf) {
+        if(str.length()==0){
+            System.out.println(asf);
+            return;
+        }
+
+        char c=str.charAt(0);
+        str=str.substring(1);
+        String ch = code[c - '0'];
+        for(int i=0;i<ch.length();i++){
+            char chh =ch.charAt(i);
+        printKPC( str,asf+chh);
+        }
+    }
