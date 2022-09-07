@@ -225,3 +225,36 @@ static String[] code = {".;","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz
     return ans;
 
     }
+    
+  17. get stair path:
+  
+  public static ArrayList<String> getStairPaths(int n) {
+       if(n==0){
+          ArrayList<String> blank = new ArrayList<>();
+          blank.add("");
+          return blank;
+       }
+       if(n<0){
+         ArrayList<String> blank = new ArrayList<>();
+          return blank; 
+       }
+
+       ArrayList<String> A= getStairPaths(n-1);
+       ArrayList<String> B= getStairPaths(n-2);
+       ArrayList<String> C= getStairPaths(n-3);
+       
+       ArrayList<String> ans = new ArrayList<>();
+
+      for(String i: A){
+         ans.add(1+i);
+      }
+      for(String i: B){
+         ans.add(2+i);
+      }
+      for(String i: C){
+         ans.add(3+i);
+      }
+      return ans;
+
+    }
+
