@@ -198,4 +198,30 @@ public static void printDecreasing(int n){
 
     }
  
- 
+16. get Keypad combination :
+
+static String[] code = {".;","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz"};
+   
+    public static ArrayList<String> getKPC(String str) {
+    if(str.length()==0){
+        ArrayList<String> blank = new ArrayList<>();
+        blank.add("");
+        return blank;
+    }
+
+    int c = str.charAt(0);
+    str=str.substring(1);
+    ArrayList<String> sub = getKPC(str);
+
+    ArrayList<String> ans = new ArrayList<>();
+    String s = code[c-'0'];
+        for (int i = 0; i < s.length(); i++) {
+             char ch = s.charAt(i);    
+         for(String join: sub){
+           ans.add(ch + join );
+         }
+    }
+
+    return ans;
+
+    }
