@@ -170,3 +170,32 @@ public static void printDecreasing(int n){
         }
 
         }
+        
+ 15. get Subsequence :
+ 
+  public static ArrayList<String> gss(String str) {
+    if(str.length()==0){
+      ArrayList<String> blank =new ArrayList<>();
+      blank.add("");
+      return blank;  
+
+    }
+
+    char ch= str.charAt(0);
+    str = str.substring(1);
+    ArrayList<String> sub =gss(str);
+
+
+     ArrayList<String> ans = new ArrayList<String>();
+
+    for(String join: sub){
+       ans.add(join);
+    }
+     for(String join: sub){
+       ans.add(ch + join);
+    }
+    return ans;
+
+    }
+ 
+ 
