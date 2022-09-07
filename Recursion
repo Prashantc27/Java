@@ -288,3 +288,38 @@ static String[] code = {".;","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz
         
         return ans;
     }
+    
+    19. Maze path with jumps:
+    
+    public static ArrayList<String> getMazePaths(int sr, int sc, int dr, int dc) {
+        if(sr==dr && sc==dc){
+            ArrayList<String> blank = new ArrayList<String>();
+            blank.add("");
+            return blank;
+        }
+        ArrayList<String> ans = new ArrayList<String>();
+
+        for(int i=1; i<=dc-sc; i++){
+          ArrayList<String> hget=getMazePaths( sr,  sc+i, dr,  dc);
+          for(String s:hget){
+            ans.add("h"+i + s);
+        }
+
+        }
+        for(int i=1; i<=dr-sr; i++){
+           ArrayList<String> vget=getMazePaths( sr+i,  sc, dr,  dc);
+           for(String s:vget){
+            ans.add("v"+i + s);
+        }
+        }
+        for(int i=1; i<=dc-sc && i<=dr-sr; i++){
+           ArrayList<String> dget=getMazePaths( sr+i,  sc+i, dr,  dc);  
+           for(String s:dget){
+            ans.add("d"+i+ s);
+        }
+        }
+        
+        
+        return ans;
+    }
+
