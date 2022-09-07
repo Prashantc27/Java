@@ -258,3 +258,33 @@ static String[] code = {".;","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz
 
     }
 
+  18. get maze path:
+  
+   public static ArrayList<String> getMazePaths(int sr, int sc, int dr, int dc) {
+        if(sr==dr && sc== dc)
+        { ArrayList<String> r = new ArrayList<String>();
+          r.add("");
+          return r;
+
+        }
+
+        ArrayList<String> hget =new ArrayList<String>();
+        ArrayList<String> vget =new ArrayList<String>();
+
+        if(sc<dc){
+            hget =getMazePaths( sr,  sc+1,  dr,  dc);
+        }
+        if(sr<dr){
+            vget =getMazePaths( sr+1,  sc,  dr,  dc);
+        }
+        ArrayList<String> ans = new ArrayList<String>();
+
+        for(String s: hget){
+            ans.add("h"+s);
+        }
+         for(String s: vget){
+            ans.add("v"+s);
+        }
+        
+        return ans;
+    }
