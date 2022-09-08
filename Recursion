@@ -355,3 +355,19 @@ static String[] code = {".;","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz
         printKPC( str,asf+chh);
         }
     }
+
+22. Print Stair Path:
+
+  public static void printStairPaths(int n, String path) {
+        if(n==0){
+           System.out.println(path);
+           return;
+        }
+        if(n<0){
+           return;
+        }
+       
+       for(int i=1; i<=3; i++){
+       printStairPaths( n-i,path+i);
+       }
+    }
