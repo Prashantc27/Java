@@ -423,3 +423,47 @@ static String[] code = {".;","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz
             String lsrs=ls+rs;
             printPermutations(lsrs,asf+c);
         }
+26. Print Encodings:
+
+public static void printEncodings(String str,String asf) {
+        if(str.length()==0){
+            System.out.println(asf);
+            return;
+        }
+        else if(str.length()==1){
+        char c1=str.charAt(0);
+           if(c1=='0'){
+            return;
+        }
+            else{
+              int c11=c1-'0';
+              char addc11=(char)('a' + c11 -1);
+              
+              System.out.println(asf+addc11);
+            }
+        }
+        else{  
+            char c1=str.charAt(0);
+            String r=str.substring(1);
+           if(c1=='0'){
+            return;  
+           }
+           else{
+            int c11=c1-'0';
+              char addc11=(char)('a' + c11 -1);
+              printEncodings(r,asf+addc11);
+           
+           }
+
+        String s2=str.substring(0,2);
+        String ss=str.substring(2);
+        
+        int c22=Integer.parseInt(s2);
+
+        if(c22<=26){
+        char addc11=(char)('a' + c22 -1);
+        printEncodings(ss,asf+addc11);
+        }
+        
+    }
+    }
