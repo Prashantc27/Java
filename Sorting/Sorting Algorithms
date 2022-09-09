@@ -24,3 +24,35 @@ public class MyClass {
      }
       }
 }
+
+
+Selection Sort:
+
+public class MyClass {
+    public static void main(String args[]) {
+     int[] a={3,4,2,5,1};
+       selection(a);
+      System.out.print(Arrays.toString(a));
+    }
+     static void selection(int[] a){
+     for(int i=0; i<a.length; i++){
+        int lastIndex=a.length-i-1; 
+        int maxElementAtIndex=getmaxIndex(a,0,lastIndex);
+        //Swap max element index with last index 
+         int t=a[maxElementAtIndex];
+         a[maxElementAtIndex]=a[lastIndex];
+         a[lastIndex]=t;
+             }
+         }
+     
+     static int getmaxIndex(int[] a,int start,int end){
+         //getting index of max element
+         int max=start;
+         for(int i=start; i<=end; i++){
+             if(a[max]<a[i]){
+                 max=i;
+             }
+         }
+         return max;
+     }
+  }
