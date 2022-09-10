@@ -24,7 +24,33 @@ public class MyClass {
      }
       }
 }
+Bubble sort using recursion:
 
+public class MyClass {
+    public static void main(String args[]) {
+    int a[]={4,3,5,1,2};
+    int i=a.length-1;
+    int idx=0;
+    bubble(a,i,idx);
+    System.out.println(Arrays.toString(a));
+    }
+    static void bubble(int[] a,int i, int idx){
+        if(i==0) return;
+        
+        if(idx<i){
+            
+           if(a[idx]>a[idx+1]){
+            int t=a[idx];
+            a[idx]=a[idx+1];
+            a[idx+1]=t;
+            }
+            bubble(a,i,idx+1);
+          }else{
+            bubble(a,i-1,0);   
+           
+        }
+        }
+        
 
 Selection Sort:
 
