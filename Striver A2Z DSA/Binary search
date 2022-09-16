@@ -1,0 +1,35 @@
+Order Agnostic BInary Search :
+ public static void main(String args[]) {
+     int[] a={13,12,11,10,5,4,3,2,1};
+     int t=11;
+     System.out.print(binary(a,0,a.length-1,t));
+    }
+    static int binary(int[] a, int s, int e,int t){
+        
+        while(s<=e){
+            
+        int m=s+(e-s)/2;
+          if(a[e]-a[s]<0){
+            if(a[m]==t){
+                return m;
+            }
+            else if(t>a[m]){
+                e=m-1;;
+            }
+            else{
+                s=m+1;
+            }  
+          }else{
+            if(a[m]==t){
+                return m;
+            }
+            else if(t>a[m]){
+                s=m+1;
+            }
+            else{
+                e=m-1;
+            }
+          }
+        }
+        return -1;
+    }
